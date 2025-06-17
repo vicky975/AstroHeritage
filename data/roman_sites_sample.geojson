@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Apulum", "type": "Colonia", "latitude": 46.078, "longitude": 23.57, "azimuth": 85, "date_range": "2nd c. CE", "notes": "Capital of Roman Dacia" }, "geometry": { "type": "Point", "coordinates": [ 23.57, 46.078 ] } },
+{ "type": "Feature", "properties": { "name": "Durostorum", "type": "Castra", "latitude": 44.117, "longitude": 27.267, "azimuth": 92, "date_range": "2nd c. CE", "notes": "Military base on Danube" }, "geometry": { "type": "Point", "coordinates": [ 27.267, 44.117 ] } },
+{ "type": "Feature", "properties": { "name": "Nicopolis ad Istrum", "type": "Municipium", "latitude": 43.295, "longitude": 25.569, "azimuth": 87, "date_range": "2nd-3rd c. CE", "notes": "Administrative center" }, "geometry": { "type": "Point", "coordinates": [ 25.569, 43.295 ] } },
+{ "type": "Feature", "properties": { "name": "Potaissa", "type": "Castra", "latitude": 46.574, "longitude": 23.665, "azimuth": 91, "date_range": "2nd c. CE", "notes": "Legio V Macedonica" }, "geometry": { "type": "Point", "coordinates": [ 23.665, 46.574 ] } },
+{ "type": "Feature", "properties": { "name": "Tropaeum Traiani", "type": "Monumentum", "latitude": 44.093, "longitude": 28.432, "azimuth": 120, "date_range": "109 CE", "notes": "Built by Trajan after Dacian Wars" }, "geometry": { "type": "Point", "coordinates": [ 28.432, 44.093 ] } }
+]
+}

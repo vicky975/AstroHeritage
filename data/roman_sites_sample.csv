@@ -1,0 +1,6 @@
+name,type,latitude,longitude,azimuth,date_range,notes,geometry
+Apulum,Colonia,46.078,23.57,85,2nd c. CE,Capital of Roman Dacia,POINT (23.57 46.078)
+Durostorum,Castra,44.117,27.267,92,2nd c. CE,Military base on Danube,POINT (27.267 44.117)
+Nicopolis ad Istrum,Municipium,43.295,25.569,87,2nd-3rd c. CE,Administrative center,POINT (25.569 43.295)
+Potaissa,Castra,46.574,23.665,91,2nd c. CE,Legio V Macedonica,POINT (23.665 46.574)
+Tropaeum Traiani,Monumentum,44.093,28.432,120,109 CE,Built by Trajan after Dacian Wars,POINT (28.432 44.093)
