@@ -195,7 +195,31 @@
   </nav>
 
   <main>
-    <section id="analyze">
+    <section id="analyze"><section id="analyze">
+  <h2>Analyze Data</h2>
+  <p>Upload your data file (JSON or CSV) to analyze ancient astronomical alignments.</p>
+
+  <input type="file" id="fileInput" accept=".json,.csv" />
+  <pre id="fileContent" style="background:#eee; padding:1rem; margin-top:1rem; max-height:300px; overflow:auto;"></pre>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileContent = document.getElementById('fileContent');
+
+    fileInput.addEventListener('change', event => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = e => {
+        fileContent.textContent = e.target.result;
+        // Εδώ μετά μπορούμε να προσθέσουμε parsing & ανάλυση
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</section>
+
       <h2>Analyze Data</h2>
       <p>Here you will analyze ancient astronomical alignments.</p>
     </section>
