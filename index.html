@@ -5,42 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroHeritage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>/* Υπάρχον CSS, πρόσθεσε στο τέλος */
+  <style>
+    /* Υπάρχον CSS, πρόσθεσε στο τέλος */
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-  section {
-    padding: 1rem;
-    margin: 1rem;
-  }
-}
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      section {
+        padding: 1rem;
+        margin: 1rem;
+      }
+    }
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-  header p {
-    font-size: 1rem;
-  }
-  nav a {
-    font-size: 0.9rem;
-  }
-  section {
-    padding: 0.8rem;
-    margin: 0.5rem;
-  }
-}
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 0.8rem;
+        margin: 0.5rem;
+      }
+    }
 
     /* Reset & base */
     *, *::before, *::after {
@@ -195,53 +196,15 @@
   </nav>
 
   <main>
-    <section id="analyze"><section id="analyze">
-  <h2>Analyze Data</h2>
-  <p>Upload your data file (JSON or CSV) to analyze ancient astronomical alignments.</p>
-
-  <input type="file" id="fileInput" accept=".json,.csv" />
-  <pre id="fileContent" style="background:#eee; padding:1rem; margin-top:1rem; max-height:300px; overflow:auto;"></pre>
-
-  <script>
-    const fileInput = document.getElementById('fileInput');
-    const fileContent = document.getElementById('fileContent');
-
-    fileInput.addEventListener('change', event => {
-      const file = event.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = e => {
-        fileContent.textContent = e.target.result;
-        // Εδώ μετά μπορούμε να προσθέσουμε parsing & ανάλυση
-      };
-      reader.readAsText(file);
-    });
-  </script>
-</section>
-
+    <section id="analyze">
       <h2>Analyze Data</h2>
-      <p>Here you will analyze ancient astronomical alignments.</p>
+      <p>Upload your data file (JSON or CSV) to analyze ancient astronomical alignments.</p>
+
+      <input type="file" id="fileInput" accept=".json,.csv" />
+      <pre id="fileContent" style="background:#eee; padding:1rem; margin-top:1rem; max-height:300px; overflow:auto;"></pre>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, and sacred spaces in relation to celestial events.</p>
-    </section>
+      <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, a
 
-    <section id="sources">
-      <h2>Sources</h2>
-      <p>Upload and explore verified historical texts, maps, inscriptions, and other archaeological materials.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach us at <a href="mailto:astroheritage.project@gmail.com">astroheritage.project@gmail.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 AstroHeritage Project. All rights reserved.</p>
-  </footer>
-</body>
-</html>
