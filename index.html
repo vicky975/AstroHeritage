@@ -4,88 +4,144 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroHeritage</title>
-</head>
-<body>
-  <h1>AstroHeritage</h1>
-  <p>Discover Ancient Astronomical Alignments</p>
-
-  <section id="analyze">
-    <h2>Analyze Data</h2>
-    <p>Here you will analyze ancient astronomical alignments.</p>
-  </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstroHeritage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    /* Reset & base */
+    *, *::before, *::after {
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: #f7f7f7;
-      color: #333;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      color: #1f2937;
       line-height: 1.6;
-      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
     }
+
     header {
       text-align: center;
       margin-bottom: 3rem;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #2c3e50;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
     }
     header p {
-      font-size: 1.2rem;
-      color: #555;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: #475569;
     }
+
     nav {
-      margin-bottom: 2rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
     }
     nav a {
-      color: #2c3e50;
-      margin: 0 1rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: #334155;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      padding: 0.25rem 0;
+      position: relative;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #1e90ff;
-      text-decoration: underline;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #2563eb;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
     }
-    section {
-      margin-bottom: 3rem;
-      max-width: 800px;
+    nav a:hover,
+    nav a:focus {
+      color: #1e40af;
+    }
+    nav a:hover::after,
+    nav a:focus::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      flex-grow: 1;
     }
-    h2 {
-      color: #2c3e50;
+
+    section {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+      margin-bottom: 3rem;
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+    }
+
+    section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0f172a;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 0.3rem;
+      max-width: max-content;
     }
+
+    section p {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
     footer {
       text-align: center;
-      margin-top: 4rem;
+      padding: 1rem 0;
       font-size: 0.9rem;
-      color: #777;
+      color: #64748b;
+      border-top: 1px solid #cbd5e1;
+      margin-top: auto;
+      background: #f8fafc;
     }
+
     a {
-      color: #1e90ff;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        gap: 1.25rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1.5rem 1.75rem;
+      }
     }
   </style>
 </head>
@@ -102,29 +158,30 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="analyze">
-    <h2>Analyze Data</h2>
-    <p>Here you will analyze ancient astronomical alignments.</p>
-  </section>
+  <main>
+    <section id="analyze">
+      <h2>Analyze Data</h2>
+      <p>Here you will analyze ancient astronomical alignments.</p>
+    </section>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, and sacred spaces in relation to celestial events.</p>
-  </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, and sacred spaces in relation to celestial events.</p>
+    </section>
 
-  <section id="sources">
-    <h2>Sources</h2>
-    <p>Upload and explore verified historical texts, maps, inscriptions, and other archaeological materials.</p>
-  </section>
+    <section id="sources">
+      <h2>Sources</h2>
+      <p>Upload and explore verified historical texts, maps, inscriptions, and other archaeological materials.</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach us at <a href="mailto:astroheritage.project@gmail.com">astroheritage.project@gmail.com</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>You can reach us at <a href="mailto:astroheritage.project@gmail.com">astroheritage.project@gmail.com</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 AstroHeritage Project. All rights reserved.</p>
   </footer>
 </body>
 </html>
-Update design
