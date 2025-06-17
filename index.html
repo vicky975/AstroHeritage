@@ -5,7 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AstroHeritage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
+  <style>/* Υπάρχον CSS, πρόσθεσε στο τέλος */
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 0.8rem;
+    margin: 0.5rem;
+  }
+}
+
     /* Reset & base */
     *, *::before, *::after {
       box-sizing: border-box;
