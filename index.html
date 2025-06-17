@@ -6,228 +6,91 @@
   <title>AstroHeritage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Υπάρχον CSS, πρόσθεσε στο τέλος */
-
+    /* Υπάρχον CSS, κράτησέ το όπως το έχεις */
     @media (max-width: 768px) {
-      body {
-        padding: 1rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        margin: 0.5rem 0;
-        font-size: 1rem;
-      }
-      section {
-        padding: 1rem;
-        margin: 1rem;
-      }
+      body { padding: 1rem; }
+      nav { display: flex; flex-direction: column; align-items: center; }
+      nav a { margin: 0.5rem 0; font-size: 1rem; }
+      section { padding: 1rem; margin: 1rem; }
     }
-
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      nav a {
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 0.8rem;
-        margin: 0.5rem;
-      }
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 1rem; }
+      nav a { font-size: 0.9rem; }
+      section { padding: 0.8rem; margin: 0.5rem; }
     }
-
-    /* Reset & base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
+      margin: 0; font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-      color: #1f2937;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      color: #1f2937; line-height: 1.6; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: space-between;
       padding: 1rem 1.5rem;
     }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
+    header { text-align: center; margin-bottom: 3rem; }
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
+      font-size: 3rem; font-weight: 700; color: #0f172a;
+      letter-spacing: 0.05em; margin-bottom: 0.25rem;
     }
-    header p {
-      font-weight: 500;
-      font-size: 1.25rem;
-      color: #475569;
-    }
-
+    header p { font-weight: 500; font-size: 1.25rem; color: #475569; }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 3rem; flex-wrap: wrap;
     }
     nav a {
-      font-weight: 600;
-      font-size: 1.125rem;
-      color: #334155;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      position: relative;
+      font-weight: 600; font-size: 1.125rem; color: #334155;
+      text-decoration: none; padding: 0.25rem 0; position: relative;
       transition: color 0.3s ease;
     }
     nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #2563eb;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
+      content: ''; position: absolute; width: 0%; height: 2px;
+      background: #2563eb; left: 0; bottom: -4px; transition: width 0.3s ease;
     }
-    nav a:hover,
-    nav a:focus {
-      color: #1e40af;
-    }
-    nav a:hover::after,
-    nav a:focus::after {
-      width: 100%;
-    }
-
+    nav a:hover, nav a:focus { color: #1e40af; }
+    nav a:hover::after, nav a:focus::after { width: 100%; }
     main {
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      flex-grow: 1;
+      max-width: 900px; margin-left: auto; margin-right: auto; flex-grow: 1;
     }
-
     section {
-      background: #fff;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
-      margin-bottom: 3rem;
+      background: #fff; padding: 2rem 2.5rem; border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1); margin-bottom: 3rem;
       transition: transform 0.3s ease;
     }
     section:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
     }
-
     section h2 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #2563eb;
-      padding-bottom: 0.3rem;
+      font-size: 1.75rem; font-weight: 700; color: #0f172a;
+      margin-bottom: 1rem; border-bottom: 2px solid #2563eb; padding-bottom: 0.3rem;
       max-width: max-content;
     }
-
     section p {
-      font-size: 1rem;
-      color: #475569;
-      line-height: 1.5;
+      font-size: 1rem; color: #475569; line-height: 1.5;
     }
-
     footer {
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      color: #64748b;
-      border-top: 1px solid #cbd5e1;
-      margin-top: auto;
+      text-align: center; padding: 1rem 0; font-size: 0.9rem;
+      color: #64748b; border-top: 1px solid #cbd5e1; margin-top: auto;
       background: #f8fafc;
     }
-
     a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
+      color: #2563eb; text-decoration: none; font-weight: 600;
     }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-      color: #1e40af;
+    a:hover, a:focus {
+      text-decoration: underline; color: #1e40af;
     }
-
     @media (max-width: 600px) {
-      nav {
-        gap: 1.25rem;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 1.5rem 1.75rem;
-      }
+      nav { gap: 1.25rem; }
+      header h1 { font-size: 2rem; }
+      section { padding: 1.5rem 1.75rem; }
+    }
+    pre {
+      background: #eee; padding: 1rem; margin-top: 1rem; max-height: 300px;
+      overflow: auto; border-radius: 8px; font-family: monospace;
+      white-space: pre-wrap; word-wrap: break-word;
     }
   </style>
 </head>
 <body>
-  <script>
-  {
-  "siteName": "Roman City A",
-  "location": {
-    "latitude": 44.1234,
-    "longitude": 26.5678
-  },
-  "orientation": {
-    "azimuth": 90.0,
-    "inclination": 0.0
-  },
-  "historicalSources": [
-    {
-      "text": "Founded by Emperor Augustus in 14 AD.",
-      "reference": "Ancient Text XYZ, Chapter 5",
-      "associatedDeities": ["Apollo", "Jupiter"]
-    },
-    {
-      "text": "Known for its eastern-facing temples dedicated to the sun.",
-      "reference": "Archaeological Report 2023"
-    }
-  ],
-  "astronomicalData": {
-    "solarPosition": {
-      "date": "010-06-21",
-      "azimuth": 90.5,
-      "altitude": 45.0
-    },
-    "starAlignments": [
-      {
-        "starName": "Sirius",
-        "date": "010-08-01",
-        "azimuth": 95.2,
-        "altitude": 20.0
-      }
-    ]
-  },
-  "socioPoliticalInfo": {
-    "colonyType": "Roman Colony",
-    "administrativeRegion": "Moesia",
-    "militaryUse": true
-  }
-}
-
-</script>
 
   <header>
     <h1>AstroHeritage</h1>
@@ -246,11 +109,64 @@
       <h2>Analyze Data</h2>
       <p>Upload your data file (JSON or CSV) to analyze ancient astronomical alignments.</p>
 
-      <input type="file" id="fileInput" accept=".json,.csv" />
-      <pre id="fileContent" style="background:#eee; padding:1rem; margin-top:1rem; max-height:300px; overflow:auto;"></pre>
+      <input type="file" id="fileInput" accept=".json,.csv" multiple />
+      <pre id="fileContent">No file loaded yet.</pre>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, a
+      <p>AstroHeritage is a research tool designed to study the orientation of ancient cities, monuments, and their astronomical alignments.</p>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 AstroHeritage</p>
+  </footer>
+
+<script>
+  const fileInput = document.getElementById('fileInput');
+  const fileContent = document.getElementById('fileContent');
+
+  fileInput.addEventListener('change', () => {
+    const files = fileInput.files;
+    if (files.length === 0) {
+      fileContent.textContent = 'No file selected.';
+      return;
+    }
+
+    fileContent.textContent = ''; // Καθάρισε το πεδίο για νέο περιεχόμενο
+
+    Array.from(files).forEach((file, index) => {
+      const reader = new FileReader();
+
+      reader.onload = (event) => {
+        let text = event.target.result;
+
+        // Αν είναι JSON, προσπάθησε να κάνεις parse
+        if (file.name.endsWith('.json')) {
+          try {
+            const jsonData = JSON.parse(text);
+            fileContent.textContent += `--- File: ${file.name} ---\n` + JSON.stringify(jsonData, null, 2) + '\n\n';
+          } catch (e) {
+            fileContent.textContent += `--- File: ${file.name} ---\nError parsing JSON: ${e.message}\n\n`;
+          }
+        }
+        // Αν είναι CSV, απλά εμφανίζουμε το κείμενο (μπορείς να βάλεις ανάλυση αν θέλεις)
+        else if (file.name.endsWith('.csv')) {
+          fileContent.textContent += `--- File: ${file.name} (CSV) ---\n` + text + '\n\n';
+        } else {
+          fileContent.textContent += `--- File: ${file.name} ---\nUnsupported file type\n\n`;
+        }
+      };
+
+      reader.onerror = () => {
+        fileContent.textContent += `--- File: ${file.name} ---\nError reading file.\n\n`;
+      };
+
+      reader.readAsText(file);
+    });
+  });
+</script>
+
+</body>
+</html>
